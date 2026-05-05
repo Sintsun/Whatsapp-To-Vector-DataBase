@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local inputs / exports (may contain PII)
+input/
+exports/
+*.txt
+cleaned_conversations.json
+out*.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+
+# Python envs
+.venv/
+env/
+.python-version
