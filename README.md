@@ -118,5 +118,5 @@ The **Postgres PGVector Store** node expects a reachable PostgreSQL database wit
 
 ## License
 
-MIT (or choose your preferred license).
+MIT 
 
