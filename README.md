@@ -102,10 +102,19 @@ For each session, the script POSTs:
 ## n8n workflow
 
 The file `WhatsApp to Vector Database.json` is a **template** workflow export.
+
+Below is a **screenshot of the workflow canvas** (Webhook POST → field edits → **Basic LLM Chain** with AWS Bedrock and structured output → **If** branch → further edits → **Postgres PGVector Store** with Bedrock embeddings):
+
+![n8n workflow: Webhook, Bedrock LLM chain, PGVector](assets/n8n-workflow-zoom.png)
+
 Import it into n8n, then:
 
 - Configure your **Webhook** node path
 - Configure credentials for providers (e.g. AWS Bedrock, Postgres)
+
+The **Postgres PGVector Store** node expects a reachable PostgreSQL database with the PGVector extension. As an **optional infrastructure reference**, the following screenshot shows an example **Amazon Aurora PostgreSQL** cluster in AWS RDS (cluster `whatsappmessage`, writer in `us-east-1` with Aurora Serverless v2 scaling):
+
+![Example AWS RDS Aurora PostgreSQL cluster for PGVector backend](assets/n8n-workflow.png)
 
 ## License
 
